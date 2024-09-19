@@ -1,0 +1,196 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    margin-top: 63px;
+}
+
+.header {
+    background-color: black;
+    color: white;
+    padding: 15px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.logo img {
+    height: 50px;
+}
+
+.navbar {
+    display: flex;
+}
+
+.menu-item {
+    position: relative;
+    margin-left: 30px;
+}
+
+.navbar a {
+    color: white;
+    padding: 15px 20px;
+    text-decoration: none;
+}
+
+.navbar a:hover {
+    background-color: #3f3f3f;
+}
+
+.submenu, .submenu-subitem {
+    display: none;
+    position: absolute;
+    background-color: whitesmoke;
+    list-style: none;
+    padding: 0;
+}
+
+.submenu li {
+    width: 200px;
+}
+
+.submenu-subitem {
+    left: 200px;
+}
+
+.submenu li a, .submenu-subitem li a {
+    display: block;
+    padding: 10px;
+    color: black;
+    text-decoration: none;
+}
+
+.submenu li a:hover, .submenu-subitem li a:hover {
+    background-color: rgb(70, 144, 255);
+}
+
+.menu-item:hover .submenu {
+    display: block;
+}
+
+.submenu-item:hover .submenu-subitem {
+    display: block;
+}
+
+/* Banner principal */
+.main-banner {
+    background-image: url('img/Playa.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+
+.banner-content h1 {
+    font-size: 3em;
+}
+
+.banner-content p {
+    font-size: 1.5em;
+    margin: 30px;
+}
+
+.button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+   
+}
+
+.button:hover {
+    background-color: #45a049;
+}
+
+/* Enlaces adicionales */
+.extra-links {
+    text-align: center;
+    padding: 50px 0;
+    background-color: #f4f4f4;
+}
+
+.extra-links h2 {
+    font-size: 2em;
+    margin-bottom: 30px;
+}
+
+.links-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.link-item {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    padding: 20px;
+    text-align: center;
+}
+
+.link-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.link-item h3 {
+    font-size: 1.5em;
+    margin: 15px 0;
+}
+
+.link-item p {
+    font-size: 1em;
+    margin: 15px 0;
+    color: #333;
+}
+
+.link-item a {
+    color: #4917ff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.link-item a:hover {
+    color: #646864;
+}
+
+/* Estilos para pantallas móviles */
+@media (max-width: 768px) {
+    .navbar {
+        display: none;
+    }
+
+    .header {
+        text-align: center;
+    }
+
+    .extra-links {
+        padding: 20px 0;
+    }
+
+    .link-item {
+        width: 100%;
+    }
+}
